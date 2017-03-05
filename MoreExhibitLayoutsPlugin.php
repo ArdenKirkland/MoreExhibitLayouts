@@ -1,11 +1,31 @@
 <?php
-class NALLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
+class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
 {
 
     protected $_filters = array('exhibit_layouts');
 
     public function filterExhibitLayouts($layouts)
     {
+        $layouts['full-thumbnail-gallery'] = array(
+            'name' => 'Full Thumbnail Gallery',
+            'description' => 'A gallery layout with full thumbnails instead of square.'
+        );
+        
+        $layouts['full-width-file'] = array(
+            'name' => 'Full Width File',
+            'description' => 'A single file at full column width.'
+        );
+        
+        $layouts['compare'] = array(
+            'name' => 'Compare',
+            'description' => '2 or more images side by side.'
+        );
+        
+        $layouts['5-grid'] = array(
+            'name' => '5 Grid',
+            'description' => 'A collage type grid with a column of 2 portrait images on one side and a column of 3 landscape images on the other.'
+        );
+        
         $layouts['nal-titlebar'] = array(
             'name' => 'NAL Titlebar',
             'description' => 'A list layout with titlebars.'
@@ -29,6 +49,7 @@ class NALLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
         return $layouts;
     }
 
+/* comment out these functions to see if they are really necessary
     public static function nal_exhibit_builder_render_exhibit_page ($exhibitPage = null)
 {
     if ($exhibitPage === null) {
@@ -80,6 +101,7 @@ class NALLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
         }
     }
 }
+*/
 
 
 }
