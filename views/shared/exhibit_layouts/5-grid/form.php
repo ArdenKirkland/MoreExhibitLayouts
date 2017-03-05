@@ -12,31 +12,11 @@ $options = $block->getOptions();
     <?php echo $this->exhibitFormAttachments($block); ?>
 </div>
 
-<div class="block-text">
-    <h4><?php echo __('Text'); ?></h4>
-    <?php echo $this->exhibitFormText($block); ?>
-</div>
-
 <div class="layout-options">
     <div class="block-header">
         <h4><?php echo __('Layout Options'); ?></h4>
         <div class="drawer"></div>
     </div>
-
-    <div class="showcase-position">
-        <?php echo $this->formLabel($formStem . '[options][showcase-position]', __('Showcase file position')); ?>
-        <?php
-        echo $this->formSelect($formStem . '[options][showcase-position]',
-            @$options['showcase-position'], array(),
-            array(
-                'none' => __('No showcase file'),
-                'left' => __('Left'),
-                'right' => __('Right')
-            )
-        );
-        ?>
-    </div>
-
 
     <div class="gallery-position">
         <?php echo $this->formLabel($formStem . '[options][gallery-position]', __('Gallery position')); ?>
@@ -49,7 +29,7 @@ $options = $block->getOptions();
             )
         );
         ?>
-        <p class="instructions"><?php echo __('If there is no showcase file the gallery will use the full width of the page.'); ?></p>
+        <p class="instructions"><?php echo __('The gallery will use the full width of the page.'); ?></p>
     </div>
 
     <div class="file-size">
@@ -76,7 +56,7 @@ $options = $block->getOptions();
                 '50%' => __('50%')
                 ));
                 ?>
-            <p class="instructions"><?php echo __('Only use this if the gallery contains only one single item.'); ?></p>
+            <p class="instructions"><?php echo __('Only use this if the gallery contains only one single item, and make sure you selected "full-size" as File size.'); ?></p>
     </div>
 
     <div class="metadata-display">
@@ -85,10 +65,12 @@ $options = $block->getOptions();
         echo $this->formMultiCheckbox($formStem . '[options][metadata-display]',
             @$options['metadata-display'], array('listsep' => '&nbsp;'),
             array(
+                "show-creator" => " Creator",
                 "show-title" => " Title",
                 "show-date" => " Date",
-                "show-desc" => " Description",
-                "show-script" => " Transcription"
+                "show-materials" => " Materials",
+                "show-techniques" => " Techniques",
+                "show-extent" => " Extent",
                 ));
                 ?>
          
