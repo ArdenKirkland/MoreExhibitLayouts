@@ -7,10 +7,7 @@
     ? html_escape($options['file-size'])
     : 'thumbnail';
 
-$width = isset($options['img-width'])
-    ? html_escape($options['img-width'])
-    : '';
-$showMetadata = isset($options['metadata-display'])
+	$showMetadata = isset($options['metadata-display'])
     ? ($options['metadata-display'])
     : '';
     
@@ -25,7 +22,7 @@ $showMetadata = isset($options['metadata-display'])
         <div id="5-grid-row">
     <?php endif; ?>
             <?php $counter++; ?>
-             <div class="exhibit-item exhibit-gallery-item" style=<?php echo '"width:' . $width . '"' ;?>>
+             <div class="exhibit-item exhibit-gallery-item">
              <?php $altText = "Thumbnail for item, linking to full sized image."; ?>
             <?php if  ($description = (metadata($item, array("Dublin Core", "Description")))): ?>
             	<?php $altText =  $description; ?>
@@ -68,7 +65,7 @@ $showMetadata = isset($options['metadata-display'])
             <?php endif; ?>
             </div>
          
-            <?php if ($counter % 4 == 0 && $attachment != end($attachments)): ?>
+            <?php if ($counter % 5 == 0 && $attachment != end($attachments)): ?>
                 </div>
                 <span class="break-row"></span>
                 <div id="5-grid-row">
