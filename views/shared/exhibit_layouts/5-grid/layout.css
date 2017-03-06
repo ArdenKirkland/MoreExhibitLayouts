@@ -23,7 +23,8 @@
 
 .layout-5-grid .exhibit-item-link *,
 .layout-5-grid .download-file * {
-    width: 100%;
+    max-height: 200px;
+    width: auto;
     margin-bottom: 2%;
 }
 
@@ -33,7 +34,7 @@
     margin-bottom: 1.25%;
     padding:10px !important;
 }
-
+  
 .layout-5-grid .exhibit-item-caption p {
     margin: 0 0 2% 0;
     clear: both;
