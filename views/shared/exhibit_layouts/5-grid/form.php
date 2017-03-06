@@ -68,8 +68,7 @@ $options = $block->getOptions();
                 "show-creator" => " Creator",
                 "show-title" => " Title",
                 "show-date" => " Date",
-                "show-materials" => " Materials",
-                "show-techniques" => " Techniques",
+                "show-medium" => " Medium",
                 "show-extent" => " Extent",
                 ));
                 ?>
