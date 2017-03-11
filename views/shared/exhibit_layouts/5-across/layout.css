@@ -1,70 +1,70 @@
-.layout-5-grid .gallery .exhibit-item {
+.layout-5-across .gallery .exhibit-item {
     width: 15%;
     margin-right: 1.25%;
 }
 
-.layout-5-grid .gallery .exhibit-item:nth-of-type(5n) {
+.layout-5-across .gallery .exhibit-item:nth-of-type(5n) {
     margin-right: 0;
 }
 
-.layout-5-grid .gallery.left {
+.layout-5-across .gallery.left {
     float: left;
     margin-right: 2%;
 }
 
-.layout-5-grid .gallery.right {
+.layout-5-across .gallery.right {
     float: right;
     margin-left: 2%;
 }
 
-.layout-5-grid a {
+.layout-5-across a {
     border-bottom: 0;
 }
 
-.layout-5-grid .exhibit-item-link *,
-.layout-5-grid .download-file * {
+.layout-5-across .exhibit-item-link *,
+.layout-5-across .download-file * {
     max-height: 200px;
     width: auto;
     margin-bottom: 2%;
 }
 
-.layout-5-grid .exhibit-item {
+.layout-5-across .exhibit-item {
     display: table-cell;
     vertical-align: top;
     margin-bottom: 1.25%;
     padding:10px !important;
 }
   
-.layout-5-grid .exhibit-item-caption p {
+.layout-5-across .exhibit-item-caption p {
     margin: 0 0 2% 0;
     clear: both;
 }
 
-.layout-5-grid {
+.layout-5-across {
     width:100%;
     text-align:center;
     display:table;
 }
 
-.layout-5-grid .exhibit-item-title {
+.layout-5-across .exhibit-item-title {
     clear: both;
     font-size:1.25em;
     font-weight:bold;
 }
 
-.layout-5-grid .exhibit-item-date {
+.layout-5-across .exhibit-item-date {
     font-style:italic;
     clear: both;
     font-size:1.25em;
     margin-bottom:0.5em;
 }
 
-#5-grid-row > div:only-child {
+#5-across-row > div:only-child {
     width: 90%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .layout-5-grid .exhibit-item {
+    .layout-5-across .exhibit-item {
         clear:both !important; 
         display:block !important;      
         width:100% !important;
@@ -73,7 +73,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .layout-5-grid .exhibit-item {
+    .layout-5-across .exhibit-item {
         clear:both !important;       
         display:block !important;      
         width:100% !important;
@@ -82,7 +82,7 @@
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .layout-5-grid .exhibit-item {
+    .layout-5-across .exhibit-item {
         clear:both !important;
         display:block !important;      
         width:100% !important; 
@@ -91,7 +91,7 @@
 }
 
 @media only screen and (max-width: 640px) {
-    .layout-5-grid .exhibit-item {
+    .layout-5-across .exhibit-item {
         clear:both !important;
         display:block !important;      
         width:100% !important;     

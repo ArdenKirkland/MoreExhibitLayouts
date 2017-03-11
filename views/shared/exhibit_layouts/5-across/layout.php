@@ -19,7 +19,7 @@
         <?php $item = $attachment->getItem(); ?>
         <?php $file = $attachment->getFile(); ?>
       <?php if ($counter == 0): ?>
-        <div id="5-grid-row">
+        <div id="5-across-row">
     <?php endif; ?>
             <?php $counter++; ?>
              <div class="exhibit-item exhibit-gallery-item">
@@ -68,7 +68,7 @@
             <?php if ($counter % 5 == 0 && $attachment != end($attachments)): ?>
                 </div>
                 <span class="break-row"></span>
-                <div id="5-grid-row">
+                <div id="5-across-row">
             <?php endif; ?>
 
 
