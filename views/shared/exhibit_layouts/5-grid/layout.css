@@ -1,20 +1,23 @@
+.layout-5-grid {
+    width:100%;
+    text-align:center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.layout-5-grid .gallery {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .layout-5-grid .gallery .exhibit-item {
-    width: 15%;
-    margin-right: 1.25%;
-}
-
-.layout-5-grid .gallery .exhibit-item:nth-of-type(5n) {
-    margin-right: 0;
-}
-
-.layout-5-grid .gallery.left {
-    float: left;
-    margin-right: 2%;
-}
-
-.layout-5-grid .gallery.right {
-    float: right;
-    margin-left: 2%;
+    width: 96%;
+    padding: 2%;
 }
 
 .layout-5-grid a {
@@ -23,13 +26,11 @@
 
 .layout-5-grid .exhibit-item-link *,
 .layout-5-grid .download-file * {
-    max-height: 200px;
-    width: auto;
     margin-bottom: 2%;
 }
 
 .layout-5-grid .exhibit-item {
-    display: table-cell;
+    display: inherit;
     vertical-align: top;
     margin-bottom: 1.25%;
     padding:10px !important;
@@ -37,31 +38,46 @@
   
 .layout-5-grid .exhibit-item-caption p {
     margin: 0 0 2% 0;
-    clear: both;
 }
 
-.layout-5-grid {
-    width:100%;
-    text-align:center;
-    display:table;
-}
 
 .layout-5-grid .exhibit-item-title {
-    clear: both;
     font-size:1.25em;
     font-weight:bold;
 }
 
 .layout-5-grid .exhibit-item-date {
     font-style:italic;
-    clear: both;
     font-size:1.25em;
     margin-bottom:0.5em;
 }
 
-#5-grid-row > div:only-child {
-    width: 90%;
+.layout-5-grid .gallery .5-grid-portrait {
+    -webkit-flex: 5 0 0;
+    -ms-flex: 5 0 0;
+    flex: 5 0 0;
 }
+
+.layout-5-grid .gallery .5-grid-landscape {
+    -webkit-flex: 7 0 0;
+    -ms-flex: 7 0 0;
+    flex: 7 0 0;
+}
+
+.layout-5-grid .gallery .5-grid-portrait.left,
+.layout-5-grid .gallery .5-grid-landscape.right {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.layout-5-grid .gallery .5-grid-portrait.right,
+.layout-5-grid .gallery .5-grid-landscape.left {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .layout-5-grid .exhibit-item {

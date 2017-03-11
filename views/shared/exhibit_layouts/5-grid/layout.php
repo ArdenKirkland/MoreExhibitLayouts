@@ -3,10 +3,6 @@
     ? html_escape($options['gallery-position'])
     : 'left';
 
-    $size = isset($options['file-size'])
-    ? html_escape($options['file-size'])
-    : 'thumbnail';
-
 	$showMetadata = isset($options['metadata-display'])
     ? ($options['metadata-display'])
     : '';
@@ -19,15 +15,19 @@
         <?php $item = $attachment->getItem(); ?>
         <?php $file = $attachment->getFile(); ?>
       <?php if ($counter == 0): ?>
-        <div id="5-grid-row">
-    <?php endif; ?>
+        <div class="5-grid-portrait <?php echo $galleryPosition; ?>">
+      <?php endif; ?>
+      <?php if ($counter == 2): ?>
+        </div>
+        <div class="5-grid-landscape <?php echo $galleryPosition; ?>">
+      <?php endif; ?>
             <?php $counter++; ?>
              <div class="exhibit-item exhibit-gallery-item">
-             <?php $altText = "Thumbnail for item, linking to full sized image."; ?>
+             <?php $altText = "Smaller image of item in a collage grouping, linking to full sized image."; ?>
             <?php if  ($description = (metadata($item, array("Dublin Core", "Description")))): ?>
             	<?php $altText =  $description; ?>
             <?php endif; ?> 
-            <?php echo file_markup($file, array('imageSize'=>$size, 'imgAttributes'=>array('alt' =>  "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))))); ?>
+            <?php echo file_markup($file, array('imageSize'=> 'fullsize', 'imgAttributes'=>array('alt' =>  "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))))); ?>
 
            <?php if ($attachment['caption'] || !empty($showMetadata)): ?>
             <div class="exhibit-item-caption">
@@ -65,10 +65,10 @@
             <?php endif; ?>
             </div>
          
-            <?php if ($counter % 5 == 0 && $attachment != end($attachments)): ?>
+            <?php if ($counter >= 5 && $attachment != end($attachments)): ?>
                 </div>
                 <span class="break-row"></span>
-                <div id="5-grid-row">
+                <div class="5-grid-hide">
             <?php endif; ?>
 
 

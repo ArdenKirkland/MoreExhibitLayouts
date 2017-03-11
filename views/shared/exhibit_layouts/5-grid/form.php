@@ -8,7 +8,7 @@ $options = $block->getOptions();
  }
  </style>
 <div class="selected-items">
-    <h4><?php echo __('Items'); ?></h4>
+    <h4><?php echo __('Choose 2 portrait images, followed by 3 landscape images'); ?></h4>
     <?php echo $this->exhibitFormAttachments($block); ?>
 </div>
 
