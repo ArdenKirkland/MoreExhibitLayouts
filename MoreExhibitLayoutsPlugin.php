@@ -11,6 +11,10 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => 'A gallery layout with full thumbnails instead of square.'
         );
         
+        $layouts['5-across'] = array(
+            'name' => '5 Across',
+            'description' => 'A gallery layout for exactly 5 images across per block.'
+        );
         $layouts['full-width-file'] = array(
             'name' => 'Full Width File',
             'description' => 'A single file at full column width.'
