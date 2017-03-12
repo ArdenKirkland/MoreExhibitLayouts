@@ -7,6 +7,11 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
     public function filterExhibitLayouts($layouts)
     {
         
+        $layouts['file-text-no-wrap'] = array(
+            'name' => 'File Text No Wrap',
+            'description' => 'A file to the left or right with a caption below and text on the opposite side.'
+        );
+        
         $layouts['5-across'] = array(
             'name' => '5 Across',
             'description' => 'A gallery layout for exactly 5 images across per block.'

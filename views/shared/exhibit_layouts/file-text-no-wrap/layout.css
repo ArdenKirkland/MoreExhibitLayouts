@@ -1,0 +1,48 @@
+.layout-file-text-no-wrap exhibit-item-col {
+	display: block;
+}
+
+.layout-file-text-no-wrap .exhibit-items > * {
+    max-width: 100%;
+    margin-bottom: 1em;
+}
+
+.layout-file-text-no-wrap .exhibit-items > *:last-child {
+    margin-bottom: 0;
+}
+
+.layout-file-text-no-wrap .exhibit-items .download-file {
+    clear: both;
+    border-bottom: 0;
+    overflow: visible;
+}
+
+.layout-file-text-no-wrap .exhibit-item-col.left {
+    float: left;
+    margin-right: 2%;
+    margin-left: 0;
+}
+
+.layout-file-text-no-wrap .exhibit-item-col.right {
+    float: right;
+    margin-left: 2%;
+    margin-right: 0;
+}
+
+.layout-file-text-no-wrap .exhibit-items img {
+    max-width: 100%;
+    margin-bottom: 1em;
+}
+
+.layout-file-text-no-wrap .exhibit-item-caption p {
+    margin: 0;
+    clear: both;
+}
+
+.layout-file-text-no-wrap .exhibit-item-caption {
+    text-align: center;
+}
+
+.layout-file-text-no-wrap .no-wrap-text {
+	overflow: hidden;
+}
