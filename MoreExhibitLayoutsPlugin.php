@@ -29,26 +29,6 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'name' => '5 Grid',
             'description' => 'A collage type grid with a column of 2 portrait images on one side and a column of 3 landscape images on the other.'
         );
-        
-        $layouts['nal-titlebar'] = array(
-            'name' => 'NAL Titlebar',
-            'description' => 'A list layout with titlebars.'
-        );
-		
-		$layouts['nal-imggal'] = array(
-            'name' => 'NAL Image Galleries',
-            'description' => 'For migrating old Drupal Galleries'
-        );
-    
-        $layouts['nal-moviegal'] = array(
-            'name' => 'NAL Movie Gallery',
-            'description' => 'Display two moving images per row.'
-        );
-
-        $layouts['nal-sidebar'] = array(
-            'name' => 'NAL Sidebar List',
-            'description' => 'Display a list of items beneath the exhibit navigation.'
-        );
 
         return $layouts;
     }
