@@ -20,9 +20,9 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => 'A single file at full column width.'
         );
         
-        $layouts['compare'] = array(
-            'name' => 'Compare',
-            'description' => '2 or more images side by side.'
+        $layouts['compare2'] = array(
+            'name' => 'Compare 2',
+            'description' => '2 images side by side.'
         );
         
         $layouts['5-grid'] = array(
