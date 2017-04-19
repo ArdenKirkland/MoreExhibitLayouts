@@ -37,25 +37,21 @@
                     if (!empty($showMetadata)) {
 
                         if (in_array("show-creator", $showMetadata)) { 
-                            echo "<div class='exhibit-item-title'>"
-                            .metadata($item, array("Dublin Core", "Creator"), array('snippet'=>100))."</div>"; 
+                            echo metadata($item, array("Dublin Core", "Creator"), array('snippet'=>100)).", "; 
                         }    
                         if (in_array("show-title", $showMetadata)) { 
-                            echo "<div class='exhibit-item-title'><a href="
+                            echo "<a href="
                             .exhibit_builder_exhibit_item_uri($item).">".metadata($item, array("Dublin Core", "Title"), 
-                                array('snippet'=>100))."</a></div>"; 
+                                array('snippet'=>100))."</a>, "; 
                         }                   
                         if (in_array("show-date", $showMetadata)) { 
-                            echo "<div class='exhibit-item-date'>"
-                            .metadata($item, array("Dublin Core", "Date"), array('snippet'=>100))."</div>";
+                            echo metadata($item, array("Dublin Core", "Date"), array('snippet'=>100)).", ";
                         }
                         if (in_array("show-medium", $showMetadata)) { 
-                            echo '<div class="exhibit-item-description">'
-                            .metadata($item, array("Dublin Core", "Medium"), array('snippet'=>150))."</div>";
+                            echo metadata($item, array("Dublin Core", "Medium"), array('snippet'=>150)).", ";
                         }
                         if (in_array("show-extent", $showMetadata)) { 
-                            echo "<div class='exhibit-item-description'>"
-                            .metadata($item, array("Dublin Core", "Extent"),array('snippet'=>150))."</div>"; 
+                            echo metadata($item, array("Dublin Core", "Extent"),array('snippet'=>150)).", "; 
                         }
                     }
 
