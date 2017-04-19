@@ -27,8 +27,10 @@
             <?php if  ($description = (metadata($item, array("Dublin Core", "Description")))): ?>
             	<?php $altText =  $description; ?>
             <?php endif; ?> 
-            <?php echo file_markup($file, array('imageSize'=>$size, 'imgAttributes'=>array('alt' =>  "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))))); ?>
-
+            <div class="item-file">
+                <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image("$size", array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
+            </div>
+                 
            <?php if ($attachment['caption'] || !empty($showMetadata)): ?>
             <div class="exhibit-item-caption">
             <?php 
@@ -40,10 +42,9 @@
                             echo metadata($item, array("Dublin Core", "Creator"), array('snippet'=>100)).", "; 
                         }    
                         if (in_array("show-title", $showMetadata)) { 
-                            echo "<a href="
-                            .exhibit_builder_exhibit_item_uri($item).">".metadata($item, array("Dublin Core", "Title"), 
-                                array('snippet'=>100))."</a>, "; 
-                        }                   
+                            echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".metadata($item, array("Dublin Core", "Title"), 
+                                array('snippet'=>100))."</a>"; 
+                        } 
                         if (in_array("show-date", $showMetadata)) { 
                             echo metadata($item, array("Dublin Core", "Date"), array('snippet'=>100)).", ";
                         }
