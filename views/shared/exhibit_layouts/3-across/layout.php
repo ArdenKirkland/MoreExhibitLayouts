@@ -34,7 +34,7 @@
                         }    
                         if (in_array("show-title", $showMetadata)) { 
                             echo "<div class='exhibit-item-title'><a href="
-                            .exhibit_builder_exhibit_item_uri($item).">".metadata($item, array("Dublin Core", "Title"), 
+                            .metadata($item, array("Item Type Metadata", "URL")).">".metadata($item, array("Dublin Core", "Title"), 
                                 array('snippet'=>100))."</a></div>"; 
                         }                   
                         if (in_array("show-date", $showMetadata)) { 
