@@ -20,7 +20,7 @@
             	<?php $altText =  $description; ?>
             <?php endif; ?> 
         <div class="item-file">
-            <?php echo file_image('fullsize', array('class' => 'full'), $file); ?>
+            <?php echo file_image('fullsize', array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file); ?>
         </div>
 
            <?php if ($attachment['caption'] || !empty($showMetadata)): ?>
