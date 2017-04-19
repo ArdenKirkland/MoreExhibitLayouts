@@ -60,10 +60,11 @@ $options = $block->getOptions();
         echo $this->formMultiCheckbox($formStem . '[options][metadata-display]',
             @$options['metadata-display'], array('listsep' => '&nbsp;'),
             array(
+                "show-creator" => " Creator",
                 "show-title" => " Title",
                 "show-date" => " Date",
-                "show-desc" => " Description",
-                "show-script" => " Transcription"
+                "show-medium" => " Medium",
+                "show-extent" => " Extent",
                 ));
                 ?>
          

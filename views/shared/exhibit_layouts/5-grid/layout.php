@@ -27,7 +27,9 @@
             <?php if  ($description = (metadata($item, array("Dublin Core", "Description")))): ?>
             	<?php $altText =  $description; ?>
             <?php endif; ?> 
-            <?php echo file_markup($file, array('imageSize'=> 'fullsize', 'imgAttributes'=>array('alt' =>  "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))))); ?>
+        <div class="item-file">
+            <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image('fullsize', array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
+        </div>
 
            <?php if ($attachment['caption'] || !empty($showMetadata)): ?>
             <div class="exhibit-item-caption">
@@ -42,9 +44,9 @@
                         }    
                         if (in_array("show-title", $showMetadata)) { 
                             echo "<div class='exhibit-item-title'><a href="
-                            .exhibit_builder_exhibit_item_uri($item).">".metadata($item, array("Dublin Core", "Title"), 
+                            .metadata($item, array("Item Type Metadata", "URL")).">".metadata($item, array("Dublin Core", "Title"), 
                                 array('snippet'=>100))."</a></div>"; 
-                        }                   
+                        } 
                         if (in_array("show-date", $showMetadata)) { 
                             echo "<div class='exhibit-item-date'>"
                             .metadata($item, array("Dublin Core", "Date"), array('snippet'=>100))."</div>";
