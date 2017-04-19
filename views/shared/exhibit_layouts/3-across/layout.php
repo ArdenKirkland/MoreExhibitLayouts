@@ -19,7 +19,9 @@
             <?php if  ($description = (metadata($item, array("Dublin Core", "Description")))): ?>
             	<?php $altText =  $description; ?>
             <?php endif; ?> 
-            <?php echo file_markup($file, array('imageSize'=>'fullsize', 'imgAttributes'=>array('alt' =>  "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))))); ?>
+        <div class="item-file">
+            <?php echo file_image('fullsize', array('class' => 'full'), $file); ?>
+        </div>
 
            <?php if ($attachment['caption'] || !empty($showMetadata)): ?>
             <div class="exhibit-item-caption">
