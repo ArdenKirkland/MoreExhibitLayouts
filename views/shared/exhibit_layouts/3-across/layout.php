@@ -20,9 +20,9 @@
             	<?php $altText =  $description; ?>
             <?php endif; ?> 
         <div class="item-file">
-            <?php echo file_image('fullsize', array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file); ?>
+            <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image('fullsize', array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
         </div>
-
+                 
            <?php if ($attachment['caption'] || !empty($showMetadata)): ?>
             <div class="exhibit-item-caption">
             <?php 
