@@ -1,11 +1,16 @@
 Plugin for Omeka that adds custom layouts to Exhibit Builder 3.x. All layouts are somewhat responsive (galleries will be one item per row for smaller screens).
 
 Adapted from NALLyouts plugin by Rachel Donahue (@sheepeeh on GitHub)
+	
+**3-across**	A gallery grid layout for exactly 3 images across per block.
 
-**Full Thumbnail Gallery**: A gallery option with thumbnails in their original aspect ratio instead of cropped to square.
+**5-across**	A gallery grid layout for exactly 5 images across per block.
 
-**Full Width Image**: Provides the option to automatically output Title, Date, Description, and Transcription in the caption area. Also allows a size to be set when attaching only a single image (which will be centered)
+**5-grid**	A collage type grid with a column of 2 portrait images on one side and a column of 3 landscape images on the other.
 
-**Compare**: 2 or more images side by side.
+**compare2**	2 images side by side.
 
-**5 Grid**: A collage type grid with a column of 2 portrait images on one side and a column of 3 landscape images on the other.
+**file-text-no-wrap**	A file to the left or right with a caption below and text on the opposite side.
+
+**full-width** A single file at full column width.
+
