@@ -1,6 +1,7 @@
 .layout-2-across .gallery .exhibit-item, {
     width: 46%;
     margin-right: 2%;
+    float: left;
 }
 
 .layout-2-across .gallery .exhibit-item:nth-of-type(2n) {
@@ -18,10 +19,12 @@
 }
 
 .layout-2-across .exhibit-item {
-    display: table-cell;
+    display: block;
     vertical-align: top;
     margin-bottom: 1.25%;
     padding:10px !important;
+    float: left;
+    width: 46%;
 }
 
 .layout-2-across .gallery.with-showcase img {
@@ -36,7 +39,7 @@
 .layout-2-across {
     width:100%;
     text-align:center;
-    display:table;
+    display:block;
 }
 
 .layout-2-across .exhibit-item-title {
