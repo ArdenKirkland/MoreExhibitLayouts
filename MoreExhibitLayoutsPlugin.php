@@ -12,9 +12,14 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => 'A file to the left or right with a caption below and text on the opposite side.'
         );
         
-        $layouts['5-across'] = array(
-            'name' => '5 Across',
-            'description' => 'A gallery layout for exactly 5 images across per block.'
+        $layouts['1-across'] = array(
+            'name' => '1 Across',
+            'description' => 'A single file at full column width, centered.'
+        );
+        
+        $layouts['2-across'] = array(
+            'name' => '2 Across',
+            'description' => '2 images side by side.'
         );
         
         $layouts['3-across'] = array(
@@ -22,19 +27,14 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => 'A gallery layout for exactly 3 images across per block.'
         );
         
-        $layouts['full-width'] = array(
-            'name' => 'Full Width',
-            'description' => 'A single file at full column width.'
+        $layouts['4-across'] = array(
+            'name' => '4 Across',
+            'description' => 'A gallery layout for exactly 4 images across per block.'
         );
         
-        $layouts['compare2'] = array(
-            'name' => 'Compare 2',
-            'description' => '2 images side by side.'
-        );
-        
-        $layouts['5-grid'] = array(
-            'name' => '5 Grid',
-            'description' => 'A collage type grid with a column of 2 portrait images on one side and a column of 3 landscape images on the other.'
+        $layouts['5-across'] = array(
+            'name' => '5 Across',
+            'description' => 'A gallery layout for exactly 5 images across per block.'
         );
 
         return $layouts;
