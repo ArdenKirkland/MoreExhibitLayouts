@@ -31,6 +31,10 @@
     max-width: 100%;
 }
 
+.layout-2-across .exhibit-item-caption {
+    margin-top: 10px;
+    clear: both;
+}
 .layout-2-across .exhibit-item-caption p {
     margin: 0 0 2% 0;
     clear: both;
@@ -46,6 +50,7 @@
     clear: both;
     font-size:1.25em;
     font-weight:bold;
+    line-height: 1.5em;
 }
 
 .layout-2-across .exhibit-item-date {
@@ -53,6 +58,12 @@
     clear: both;
     font-size:1.25em;
     margin-bottom:0.5em;
+}
+
+.layout-2-across .exhibit-item-description {
+    clear: both;
+    font-size:1.25em;
+    line-height: 1.5em;
 }
 
 #2-across-row > div:only-child {

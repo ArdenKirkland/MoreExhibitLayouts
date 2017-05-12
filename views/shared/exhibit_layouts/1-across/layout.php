@@ -22,7 +22,7 @@ $showMetadata = isset($options['metadata-display'])
 
            	<?php if ($attachment['caption'] || !empty($showMetadata)): ?>
             	<div class="exhibit-item-caption">
-            		<?php 
+            <?php 
                     if ($attachment['caption']) {echo $attachment['caption']; }
 
                     if (!empty($showMetadata)) {
@@ -37,7 +37,7 @@ $showMetadata = isset($options['metadata-display'])
                                 array('snippet'=>100))."</a></div>"; 
                         }                   
                         if (in_array("show-date", $showMetadata)) { 
-                            echo "<div class='exhibit-item-date'>"
+                            echo "<div class='exhibit-item-description'>"
                             .metadata($item, array("Dublin Core", "Date"), array('snippet'=>100))."</div>";
                         }
                         if (in_array("show-medium", $showMetadata)) { 
@@ -54,8 +54,8 @@ $showMetadata = isset($options['metadata-display'])
                         }
                     }
 
-                	; ?>
-            	</div>
+                ; ?>
+            </div>
 
             <?php endif; ?>
         	</div>

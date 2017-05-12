@@ -29,12 +29,12 @@ $showMetadata = isset($options['metadata-display'])
 		<?php endforeach; ?>
 	</div>
 	<div class="exhibit-item-caption">
-			<?php 
-					if ($attachment['caption']) {echo $attachment['caption']; }
+            <?php 
+                    if ($attachment['caption']) {echo $attachment['caption']; }
 
-					if (!empty($showMetadata)) {
+                    if (!empty($showMetadata)) {
 
-						if (in_array("show-creator", $showMetadata)) { 
+                        if (in_array("show-creator", $showMetadata)) { 
                             echo "<div class='exhibit-item-title'>"
                             .metadata($item, array("Dublin Core", "Creator"), array('snippet'=>100))."</div>"; 
                         }    
@@ -44,7 +44,7 @@ $showMetadata = isset($options['metadata-display'])
                                 array('snippet'=>100))."</a></div>"; 
                         }                   
                         if (in_array("show-date", $showMetadata)) { 
-                            echo "<div class='exhibit-item-date'>"
+                            echo "<div class='exhibit-item-description'>"
                             .metadata($item, array("Dublin Core", "Date"), array('snippet'=>100))."</div>";
                         }
                         if (in_array("show-medium", $showMetadata)) { 
@@ -55,10 +55,14 @@ $showMetadata = isset($options['metadata-display'])
                             echo "<div class='exhibit-item-description'>"
                             .metadata($item, array("Dublin Core", "Extent"),array('snippet'=>150))."</div>"; 
                         }
-					}
+                        if (in_array("show-holding", $showMetadata)) { 
+                            echo "<div class='exhibit-item-description'>"
+                            .metadata($item, array("Item Type Metadata", "Holding Institution"),array('snippet'=>150))."</div>"; 
+                        }
+                    }
 
-				; ?>
-		</div>
+                ; ?>
+            </div>
 	</div>
 <div class="no-wrap-text">
 <?php echo $text; ?>

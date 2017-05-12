@@ -39,20 +39,29 @@
                     if (!empty($showMetadata)) {
 
                         if (in_array("show-creator", $showMetadata)) { 
-                            echo metadata($item, array("Dublin Core", "Creator"), array('snippet'=>100)).", "; 
+                            echo "<div class='exhibit-item-title'>"
+                            .metadata($item, array("Dublin Core", "Creator"), array('snippet'=>100))."</div>"; 
                         }    
                         if (in_array("show-title", $showMetadata)) { 
-                            echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".metadata($item, array("Dublin Core", "Title"), 
-                                array('snippet'=>100))."</a>"; 
-                        } 
+                            echo "<div class='exhibit-item-title'><a href="
+                            .metadata($item, array("Item Type Metadata", "URL")).">".metadata($item, array("Dublin Core", "Title"), 
+                                array('snippet'=>100))."</a></div>"; 
+                        }                   
                         if (in_array("show-date", $showMetadata)) { 
-                            echo metadata($item, array("Dublin Core", "Date"), array('snippet'=>100)).", ";
+                            echo "<div class='exhibit-item-description'>"
+                            .metadata($item, array("Dublin Core", "Date"), array('snippet'=>100))."</div>";
                         }
                         if (in_array("show-medium", $showMetadata)) { 
-                            echo metadata($item, array("Dublin Core", "Medium"), array('snippet'=>150)).", ";
+                            echo '<div class="exhibit-item-description">'
+                            .metadata($item, array("Dublin Core", "Medium"), array('snippet'=>150))."</div>";
                         }
                         if (in_array("show-extent", $showMetadata)) { 
-                            echo metadata($item, array("Dublin Core", "Extent"),array('snippet'=>150)).", "; 
+                            echo "<div class='exhibit-item-description'>"
+                            .metadata($item, array("Dublin Core", "Extent"),array('snippet'=>150))."</div>"; 
+                        }
+                        if (in_array("show-holding", $showMetadata)) { 
+                            echo "<div class='exhibit-item-description'>"
+                            .metadata($item, array("Item Type Metadata", "Holding Institution"),array('snippet'=>150))."</div>"; 
                         }
                     }
 

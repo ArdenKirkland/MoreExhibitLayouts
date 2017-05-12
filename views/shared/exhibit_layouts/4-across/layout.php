@@ -40,7 +40,7 @@
                                 array('snippet'=>100))."</a></div>"; 
                         }                   
                         if (in_array("show-date", $showMetadata)) { 
-                            echo "<div class='exhibit-item-date'>"
+                            echo "<div class='exhibit-item-description'>"
                             .metadata($item, array("Dublin Core", "Date"), array('snippet'=>100))."</div>";
                         }
                         if (in_array("show-medium", $showMetadata)) { 
