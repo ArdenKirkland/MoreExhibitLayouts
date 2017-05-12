@@ -62,6 +62,5 @@ $showMetadata = isset($options['metadata-display'])
          </div>
         <?php endforeach; ?>   
 
-    </div>
 </div>
 
