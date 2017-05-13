@@ -27,19 +27,6 @@ $options = $block->getOptions();
         ?>
     </div>
     
-    <div class="file-size">
-        <?php echo $this->formLabel($formStem . '[options][file-size]', __('File size')); ?>
-        <?php
-        echo $this->formSelect($formStem . '[options][file-size]',
-            @$options['file-size'], array(),
-            array(
-                'fullsize' => __('Fullsize'),
-                'thumbnail' => __('Thumbnail'),
-                'square_thumbnail' => __('Square Thumbnail')
-            ));
-        ?>
-    </div>
-    
      <div class="image-width">
         <?php echo $this->formLabel($formStem . '[options][img-width]', __('Image Width')); ?>
         <?php
@@ -65,6 +52,7 @@ $options = $block->getOptions();
                 "show-date" => " Date",
                 "show-medium" => " Medium",
                 "show-extent" => " Extent",
+                "show-holding" => " Holding Institution",
                 ));
                 ?>
          

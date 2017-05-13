@@ -2,9 +2,6 @@
 $position = isset($options['file-position'])
     ? html_escape($options['file-position'])
     : 'left';
-$size = isset($options['file-size'])
-    ? html_escape($options['file-size'])
-    : 'thumbnail';
 $width = isset($options['img-width'])
     ? html_escape($options['img-width'])
     : '';
@@ -17,13 +14,13 @@ $showMetadata = isset($options['metadata-display'])
 		<?php foreach ($attachments as $attachment): ?>
 			<?php $item = $attachment->getItem(); ?>
         	<?php $file = $attachment->getFile(); ?>
-			<?php $altText = "Thumbnail for item, linking to full sized image."; ?>
+			<?php $altText = "Image of item"; ?>
             <?php if  ($description = (metadata($item, array("Dublin Core", "Description")))): ?>
             <?php $altText =  $description; ?>
             <?php endif; ?> 
         
         <div class="item-file">
-            <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image("$size", array('alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
+            <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image("fullsize", array('alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
         </div>
 
 		<?php endforeach; ?>
