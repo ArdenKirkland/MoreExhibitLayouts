@@ -33,7 +33,6 @@ $options = $block->getOptions();
         echo $this->formSelect($formStem . '[options][img-width]',
             @$options['img-width'], array(),
             array(
-                ' ' => "N/A",
                 '50%' => __('50%'),
                 '33%' => __('33%'),
                 '25%' => __('25%')

@@ -29,7 +29,7 @@ $options = $block->getOptions();
                 "show-date" => " Date",
                 "show-medium" => " Medium",
                 "show-extent" => " Extent",
-                "show-holding" => " Holding",
+                "show-holding" => " Holding Institution",
                 ));
                 ?>
          

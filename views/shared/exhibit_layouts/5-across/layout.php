@@ -1,11 +1,4 @@
 <?php
-	$galleryPosition = isset($options['gallery-position'])
-    ? html_escape($options['gallery-position'])
-    : 'left';
-
-    $size = isset($options['file-size'])
-    ? html_escape($options['file-size'])
-    : 'thumbnail';
 
 	$showMetadata = isset($options['metadata-display'])
     ? ($options['metadata-display'])
@@ -23,12 +16,12 @@
     <?php endif; ?>
             <?php $counter++; ?>
              <div class="exhibit-item exhibit-gallery-item">
-             <?php $altText = "Thumbnail for item, linking to full sized image."; ?>
+             <?php $altText = "Image for item"; ?>
             <?php if  ($description = (metadata($item, array("Dublin Core", "Description")))): ?>
             	<?php $altText =  $description; ?>
             <?php endif; ?> 
             <div class="item-file">
-                <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image("$size", array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
+                <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image("fullsize", array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
             </div>
                  
            <?php if ($attachment['caption'] || !empty($showMetadata)): ?>
