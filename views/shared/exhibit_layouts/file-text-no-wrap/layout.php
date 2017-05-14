@@ -20,26 +20,51 @@ $showMetadata = isset($options['metadata-display'])
             <?php endif; ?> 
         
         <div class="item-file">
-            <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image("fullsize", array('alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
+    
+            <?php if ($URL = metadata($item, array('Item Type Metadata', 'URL'))): ?>
+            
+                <?php echo "<a href=".metadata($item, array("Item Type Metadata", "URL")).">".file_image('fullsize', array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file)."</a>"; ?>
+            
+            <?php else : ?>
+    
+                <?php echo file_image('fullsize', array('class' => 'full', 'alt' => "$altText", 'title' => metadata($item, array("Dublin Core", "Title"))), $file) ; ?>
+            
+             <?php endif; ?>
         </div>
 
 		<?php endforeach; ?>
 	</div>
 	<div class="exhibit-item-caption">
             <?php 
-                    if ($attachment['caption']) {echo $attachment['caption']; }
+                    if ($attachment['caption']) {
+                        echo $attachment['caption']; 
+                        }
 
                     if (!empty($showMetadata)) {
 
                         if (in_array("show-creator", $showMetadata)) { 
                             echo "<div class='exhibit-item-title'>"
                             .metadata($item, array("Dublin Core", "Creator"), array('snippet'=>100))."</div>"; 
-                        }    
+                            }    
+                        
                         if (in_array("show-title", $showMetadata)) { 
+                            
+                            if ($URL = metadata($item, array('Item Type Metadata', 'URL'))) {
+            
                             echo "<div class='exhibit-item-title'><a href="
                             .metadata($item, array("Item Type Metadata", "URL")).">".metadata($item, array("Dublin Core", "Title"), 
-                                array('snippet'=>100))."</a></div>"; 
-                        }                   
+                                array('snippet'=>100))."</a></div>";
+                            }
+
+                            else {
+                                
+                            echo "<div class='exhibit-item-title'>".metadata($item, array("Dublin Core", "Title"), 
+                                array('snippet'=>100))."</a></div>";
+                            }
+
+                            }
+        
+                                       
                         if (in_array("show-date", $showMetadata)) { 
                             echo "<div class='exhibit-item-description'>"
                             .metadata($item, array("Dublin Core", "Date"), array('snippet'=>100))."</div>";
