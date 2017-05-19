@@ -32,12 +32,7 @@
 }
 
 .layout-2-across .exhibit-item-caption {
-    margin-top: 10px;
-    clear: both;
-}
-.layout-2-across .exhibit-item-caption p {
-    margin: 0 0 2% 0;
-    clear: both;
+    text-align: center;
 }
 
 .layout-2-across {
@@ -48,26 +43,16 @@
 
 .layout-2-across .exhibit-item-title {
     clear: both;
-    font-size:1.25em;
     font-weight:bold;
-    line-height: 1.5em;
 }
 
 .layout-2-across .exhibit-item-date {
     font-style:italic;
     clear: both;
-    font-size:1.25em;
-    margin-bottom:0.5em;
 }
 
 .layout-2-across .exhibit-item-description {
     clear: both;
-    font-size:1.25em;
-    line-height: 1.5em;
-}
-
-#2-across-row > div:only-child {
-    width: 90%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {

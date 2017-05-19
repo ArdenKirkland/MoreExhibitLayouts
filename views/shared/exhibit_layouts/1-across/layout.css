@@ -24,39 +24,28 @@
     max-width: 100%;
 }
 
-.layout-1-across .exhibit-item-caption {
-    margin-top: 10px;
-    clear: both;
-}
-.layout-1-across .exhibit-item-caption p {
-    margin: 0 0 2% 0;
-    clear: both;
-}
-
 .layout-1-across {
     width:100%;
     text-align:center;
     display:table;
 }
 
+.layout-1-across .exhibit-item-caption {
+    text-align: center;
+}
+
 .layout-1-across .exhibit-item-title {
     clear: both;
-    font-size:1.25em;
     font-weight:bold;
-    line-height: 1.5em;
 }
 
 .layout-1-across .exhibit-item-date {
     font-style:italic;
     clear: both;
-    font-size:1.25em;
-    margin-bottom:0.5em;
 }
 
 .layout-1-across .exhibit-item-description {
     clear: both;
-    font-size:1.25em;
-    line-height: 1.5em;
 }
 
 #1-across-row > div:only-child {

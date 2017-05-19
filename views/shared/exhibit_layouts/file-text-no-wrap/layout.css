@@ -36,33 +36,22 @@
     margin-bottom: 1em;
 }
 
-.layout-file-text-no-wrap .exhibit-item-caption p {
-    margin: 0;
-    clear: both;
-}
-
 .layout-file-text-no-wrap .exhibit-item-caption {
-    text-align: center;
+    text-align: left;
 }
 
 .layout-file-text-no-wrap .exhibit-item-title {
     clear: both;
-    font-size:1.25em;
     font-weight:bold;
-    line-height: 1.5em;
 }
 
 .layout-file-text-no-wrap .exhibit-item-date {
     font-style:italic;
     clear: both;
-    font-size:1.25em;
-    margin-bottom:0.5em;
 }
 
 .layout-file-text-no-wrap .exhibit-item-description {
     clear: both;
-    font-size:1.25em;
-    line-height: 1.5em;
 }
 
 .layout-file-text-no-wrap .no-wrap-text {
