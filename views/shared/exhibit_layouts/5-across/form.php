@@ -30,6 +30,7 @@ $options = $block->getOptions();
                 "show-medium" => " Medium",
                 "show-extent" => " Extent",
                 "show-holding" => " Holding Institution",
+                "show-credit" => " Credit Line",
                 ));
                 ?>
          
