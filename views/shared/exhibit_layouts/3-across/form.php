@@ -22,7 +22,7 @@ $options = $block->getOptions();
         <?php echo $this->formLabel($formStem . '[options][metadata-display]', __('Display these elements:')). '<br />'; ?>
         <?php
         echo $this->formMultiCheckbox($formStem . '[options][metadata-display]',
-            @$options['metadata-display'], array('listsep' => '&nbsp;'),
+            @$options['metadata-display'], array('listsep' => '&nbsp;'), 
             array(
                 "show-creator" => " Creator",
                 "show-title" => " Title",
@@ -31,6 +31,7 @@ $options = $block->getOptions();
                 "show-extent" => " Extent",
                 "show-holding" => " Holding Institution",
                 "show-credit" => " Credit Line",
+                "show-identifier" => " Identifier",
                 ));
                 ?>
          
