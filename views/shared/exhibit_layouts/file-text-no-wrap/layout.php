@@ -99,7 +99,7 @@ $showMetadata = isset($options['metadata-display'])
                         }
                         if (in_array("show-holding", $showMetadata)) { 
                             if (in_array("show-credit", $showMetadata)) {
-                                if (!empty(metadata($item, array("Item Type Metadata", "Credit")))) {
+                                if (!empty(metadata($item, array("Item Type Metadata", "Credit Line")))) {
                                 
                                     echo "<div class='exhibit-item-description'>".metadata($item, array("Item Type Metadata", "Holding Institution"),array('snippet'=>150))."; ";
                                     }
@@ -116,7 +116,7 @@ $showMetadata = isset($options['metadata-display'])
                         }
                         if (in_array("show-credit", $showMetadata)) { 
                             echo "<span class='exhibit-item-description'>"
-                            .metadata($item, array("Item Type Metadata", "Credit"),array('snippet'=>150))."</span></div>"; 
+                            .metadata($item, array("Item Type Metadata", "Credit Line"),array('snippet'=>150))."</span></div>"; 
                         }
                         else {
                             echo "</div>";
