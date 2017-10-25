@@ -16,8 +16,8 @@
 .layout-1-across .exhibit-item {
     display: block;
     vertical-align: top;
-    margin-bottom: 1.25%;
-    padding:10px !important;
+    margin-bottom: 0;
+    padding:10px 10px 0px 10px !important;
 }
 
 .layout-1-across .gallery.with-showcase img {

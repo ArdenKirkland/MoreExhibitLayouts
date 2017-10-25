@@ -31,8 +31,8 @@
 .layout-5-across .exhibit-item {
     display: table-cell;
     vertical-align: top;
-    margin-bottom: 1.25%;
-    padding:10px !important;
+    margin-bottom: 0;
+    padding:10px 10px 0px 10px !important;
 }
   
 .layout-5-across .exhibit-item-caption {
