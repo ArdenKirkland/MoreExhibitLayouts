@@ -12,6 +12,11 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => 'A file to the left or right with a caption below and text on the opposite side.'
         );
         
+        $layouts['file-text-external-link'] = array(
+            'name' => 'File Text External Link',
+            'description' => 'A file to the left or right with a caption below and text wrapping around.'
+        );
+        
         $layouts['1-across'] = array(
             'name' => '1 Across',
             'description' => 'A single file at full column width, centered.'
