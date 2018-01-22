@@ -1,8 +1,11 @@
-Plugin for Omeka that adds custom layouts to Exhibit Builder 3.x. All layouts are somewhat responsive (galleries will be one item per row for smaller screens).
+Plugin for Omeka that adds custom exhibit layouts to Exhibit Builder 3.x. 
+All layouts are somewhat responsive (galleries will be one item per row for smaller screens).
 
 Adapted from NALLyouts plugin by Rachel Donahue (@sheepeeh on GitHub)
 
-All layouts include an option of automatically including item metadata in the caption. 
+All layouts include an option of automatically including item metadata in the caption (look for checkboxes to select what will be included in automatic caption). 
+
+To link to an item record/display in another system, such as CONTENTdm, use the URL element in Item Type Metadata to record the full URL. This element can be added to any item type. With the layouts listed below, the image and title will link to that URL. Beware - using the original Omeka exhibit layouts will NOT link to your URL, they will link to the item's record in Omeka. Also, if a URL is not provided, the image and title will NOT link to anything. 
 	
 **1-across**	A single file at full column width.
 
