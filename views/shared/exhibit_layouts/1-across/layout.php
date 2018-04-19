@@ -140,7 +140,7 @@ $showMetadata = isset($options['metadata-display'])
                                     echo "<div class='exhibit-item-description'>".$collnick."; ";
                                     }
                                 else {
-                                    echo "<div class='exhibit-item-description'>";
+                                    echo "<div class='exhibit-item-description'>".$collnick."";
                                 }
                             }
                             else {
