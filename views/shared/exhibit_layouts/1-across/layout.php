@@ -8,7 +8,21 @@ $showMetadata = isset($options['metadata-display'])
 <div class="gallery">
 	<div style="text-align:left;"><?php echo $this->shortcodes($text); ?></div>
 	<?php foreach ($attachments as $attachment): ?>
-	<?php $item = $attachment->getItem(); ?>
+	<?php $item = $attachment->getItem(); 
+        $collection = get_collection_for_item($item);
+        $collectionId = metadata($collection, 'id');
+            if ($collectionID = '1')
+                $collnick=CPW;
+            if ($collectionID = '2')
+                $collnick=Dorsky;
+            if ($collectionID = '3')
+                $collnick=WSW;
+            if ($collectionID = '4')
+                $collnick=WAAM;
+            if ($collectionID = '5')
+                $collnick=WBG;
+    ?>
+    
 	<?php $file = $attachment->getFile(); ?>
 		<div id="1-across-row">
 		<div class="exhibit-item exhibit-gallery-item">
@@ -32,11 +46,15 @@ $showMetadata = isset($options['metadata-display'])
            	<?php if ($attachment['caption'] || !empty($showMetadata)): ?>
             	<div class="exhibit-item-caption">
             <?php 
+                    
                     if ($attachment['caption']) {echo $attachment['caption']; }
+                    
+                    
 
                     if (!empty($showMetadata)) {
 
                         if (in_array("show-creator", $showMetadata)) { 
+                            
                                 echo "<div class='exhibit-item-title'>".metadata($item, array('Dublin Core', 'Creator'), array('snippet'=>100))."</div>";
                             
                         }    
@@ -111,6 +129,30 @@ $showMetadata = isset($options['metadata-display'])
                         if (in_array("show-credit", $showMetadata)) { 
                             echo "<span class='exhibit-item-description'>"
                             .metadata($item, array("Item Type Metadata", "Credit Line"),array('snippet'=>150))."</span></div>"; 
+                        }
+                        else {
+                            echo "</div>";
+                        }
+                        if (in_array("show-collection", $showMetadata)) { 
+                            if (in_array("show-provenance", $showMetadata)) {
+                                if (!empty(metadata($item, array("Dublin Core", "Provenance")))) {
+                                
+                                    echo "<div class='exhibit-item-description'>".$collnick."; ";
+                                    }
+                                else {
+                                    echo "<div class='exhibit-item-description'>";
+                                }
+                            }
+                            else {
+                                echo "<div class='exhibit-item-description'>".$collnick."";
+                                    }
+                        }                 
+                        else {
+                            echo "<div class='exhibit-item-description'>";
+                        }
+                        if (in_array("show-provenance", $showMetadata)) { 
+                            echo "<span class='exhibit-item-description'>"
+                            .metadata($item, array("Dublin Core", "Provenance"),array('snippet'=>150))."</span></div>"; 
                         }
                         else {
                             echo "</div>";
