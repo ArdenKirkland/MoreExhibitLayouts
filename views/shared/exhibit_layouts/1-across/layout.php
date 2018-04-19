@@ -116,7 +116,7 @@ $showMetadata = isset($options['metadata-display'])
                                     echo "<div class='exhibit-item-description'>".metadata($item, array("Item Type Metadata", "Holding Institution"),array('snippet'=>150))."; ";
                                     }
                                 else {
-                                    echo "<div class='exhibit-item-description'>";
+                                    echo "<div class='exhibit-item-description'>".metadata($item, array("Item Type Metadata", "Holding Institution"),array('snippet'=>150))."";
                                 }
                             }
                             else {
