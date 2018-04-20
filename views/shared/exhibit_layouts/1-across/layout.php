@@ -95,6 +95,9 @@ $showMetadata = isset($options['metadata-display'])
                         if (in_array("show-medium", $showMetadata)) { 
                                 echo '<div class="exhibit-item-description">'.metadata($item, array("Dublin Core", "Medium"), array('snippet'=>150))."</div>";
                         }
+                        if (in_array("show-type", $showMetadata)) { 
+                                echo '<div class="exhibit-item-description">'.metadata($item, array("Dublin Core", "Type"), array('snippet'=>150))."</div>";
+                        }
                         if (in_array("show-extent", $showMetadata)) { 
                             echo "<div class='exhibit-item-description'>"
                             .metadata($item, array("Dublin Core", "Extent"),array('snippet'=>150))."</div>"; 

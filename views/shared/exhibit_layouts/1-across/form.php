@@ -28,6 +28,7 @@ $options = $block->getOptions();
                 "show-title" => " Title",
                 "show-date" => " Date",
                 "show-medium" => " Medium",
+                "show-type" => " Type",
                 "show-extent" => " Extent",
                 "show-holding" => " Holding Institution",
                 "show-credit" => " Credit Line",
