@@ -10,17 +10,7 @@ $showMetadata = isset($options['metadata-display'])
 	<?php foreach ($attachments as $attachment): ?>
 	<?php $item = $attachment->getItem(); 
         $collection = get_collection_for_item($item);
-        $collectionId = metadata($collection, 'id');
-            if ($collectionID = '1')
-                $collnick=CPW;
-            if ($collectionID = '2')
-                $collnick=Dorsky;
-            if ($collectionID = '3')
-                $collnick=WSW;
-            if ($collectionID = '4')
-                $collnick=WAAM;
-            if ($collectionID = '5')
-                $collnick=WBG;
+        
     ?>
     
 	<?php $file = $attachment->getFile(); ?>
@@ -55,7 +45,7 @@ $showMetadata = isset($options['metadata-display'])
 
                         if (in_array("show-creator", $showMetadata)) { 
                             
-                                echo "<div class='exhibit-item-title'>".metadata($item, array('Dublin Core', 'Creator'), array('snippet'=>100))."</div>";
+                            echo "<div class='exhibit-item-title'>".metadata($item, array('Dublin Core', 'Creator'), array('snippet'=>100))."</div>";
                             
                         }    
                         if (in_array("show-title", $showMetadata)) { 
@@ -133,7 +123,20 @@ $showMetadata = isset($options['metadata-display'])
                         else {
                             echo "</div>";
                         }
-                        if (in_array("show-collection", $showMetadata)) { 
+                        if (in_array("show-collection", $showMetadata)) {
+                            $collectionID = metadata($collection, 'id');
+                                if ($collectionID === 1) {
+                                    $collnick = 'CPW';}
+                                elseif ($collectionID === 2){
+                                    $collnick = 'Dorsky';}
+                                elseif ($collectionID === 3){
+                                    $collnick = 'WSW';}
+                                elseif ($collectionID === 4){
+                                    $collnick = 'WAAM';}
+                                elseif ($collectionID === 5){
+                                    $collnick = 'WBG';}
+                                else $collnick='other';
+                            
                             if (in_array("show-provenance", $showMetadata)) {
                                 if (!empty(metadata($item, array("Dublin Core", "Provenance")))) {
                                 
@@ -161,6 +164,7 @@ $showMetadata = isset($options['metadata-display'])
                             echo "<div class='exhibit-item-description'>"
                             .metadata($item, array("Dublin Core", "Identifier"),array('snippet'=>150))."</div>"; 
                         }
+                        unset($collection, $collectionID, $collnick);
                     }
 
                 ; ?>
