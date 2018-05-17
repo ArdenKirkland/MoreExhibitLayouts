@@ -127,6 +127,7 @@ $showMetadata = isset($options['metadata-display'])
                             echo "</div>";
                         }
                         if (in_array("show-collection", $showMetadata)) {
+                            if (!empty($collection)) {
                             $collectionID = metadata($collection, 'id');
                                 if ($collectionID === 1) {
                                     $collnick = 'CPW';}
@@ -152,6 +153,10 @@ $showMetadata = isset($options['metadata-display'])
                             else {
                                 echo "<div class='exhibit-item-description'>".$collnick."";
                                     }
+                            }
+                            else {
+                                echo "<div class='exhibit-item-description'>";
+                                }
                         }                 
                         else {
                             echo "<div class='exhibit-item-description'>";
