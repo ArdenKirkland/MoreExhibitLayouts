@@ -28,8 +28,8 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
         );
         
         $layouts['2-across-text'] = array(
-            'name' => '2 Across Rext',
-            'description' => '2 columns of text side by side (appropriate for embedding html into one column).'
+            'name' => '2 Across Text',
+            'description' => '2 columns of text side by side (also suitable for embedding content in either column using html)'
         );
         
         $layouts['3-across'] = array(
