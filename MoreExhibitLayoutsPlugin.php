@@ -27,6 +27,11 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => '2 images side by side.'
         );
         
+        $layouts['2-across-text'] = array(
+            'name' => '2 Across Rext',
+            'description' => '2 columns of text side by side (appropriate for embedding html into one column).'
+        );
+        
         $layouts['3-across'] = array(
             'name' => '3 Across',
             'description' => 'A gallery layout for exactly 3 images across per block.'
