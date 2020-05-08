@@ -12,6 +12,11 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => 'A file to the left or right with a caption below and text on the opposite side.'
         );
         
+        $layouts['VR-text-no-wrap'] = array(
+            'name' => 'VR Text no wrap',
+            'description' => 'An embedded rotating view to the left or right with a caption below and text on the opposite side'
+        );
+        
         $layouts['file-text-external-link'] = array(
             'name' => 'File Text External Link',
             'description' => 'A file to the left or right with a caption below and text wrapping around.'
@@ -27,10 +32,6 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => '2 images side by side.'
         );
         
-        $layouts['2-across-text'] = array(
-            'name' => '2 Across Text',
-            'description' => '2 columns of text side by side (also suitable for embedding content in either column using html)'
-        );
         
         $layouts['3-across'] = array(
             'name' => '3 Across',
