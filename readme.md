@@ -20,3 +20,5 @@ To link to an item record/display in another system, such as CONTENTdm, use the 
 **file-text-no-wrap**	A file to the left or right with a caption below and text on the opposite side, not wrapping under the file.
 
 **file-text-external-link**	A file to the left or right with a caption below and text wrapping around.
+
+**VR-text-no-wrap**	An embedded iframe to the left or right (for a VR file) with a caption below and text on the opposite side, not wrapping under the file.
