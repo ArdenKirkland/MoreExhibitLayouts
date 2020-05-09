@@ -25,7 +25,7 @@ $showMetadata = isset($options['metadata-display'])
     
             <?php if ($URL = metadata($item, array('Item Type Metadata', 'URL'))): ?>
             
-                <?php echo "<iframe  src=".metadata($item, array("Item Type Metadata", "URL"))."></iframe>"; ?>
+                     <?php echo "<iframe  src=".metadata($item, array("Item Type Metadata", "URL"))."></iframe>"; ?>
             
             <?php else : ?>
     

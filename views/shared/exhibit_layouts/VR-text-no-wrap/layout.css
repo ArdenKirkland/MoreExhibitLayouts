@@ -37,7 +37,9 @@
 }
 
 .layout-VR-text-no-wrap .exhibit-items iframe {
-    height: 600px;
+    height: 640px;
+    width: 400px;
+    border: 0px;
 }
 
 .layout-VR-text-no-wrap .exhibit-item-caption {
