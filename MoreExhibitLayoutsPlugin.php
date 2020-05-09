@@ -17,6 +17,11 @@ class MoreExhibitLayoutsPlugin extends Omeka_Plugin_AbstractPlugin
             'description' => 'An embedded rotating view to the left or right with a caption below and text on the opposite side'
         );
         
+        $layouts['VR-alone'] = array(
+            'name' => 'VR Alone',
+            'description' => 'A centered embedded rotating view with a caption below'
+        );
+        
         $layouts['file-text-external-link'] = array(
             'name' => 'File Text External Link',
             'description' => 'A file to the left or right with a caption below and text wrapping around.'
